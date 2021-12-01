@@ -7,9 +7,8 @@ import androidx.room.RoomDatabase
 import com.skreep.todoapp.model.Note
 import kotlinx.coroutines.CoroutineScope
 
-abstract class NoteDatabase {
 
-    @Database(entities = arrayOf(Note::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(Note::class), version = 1, exportSchema = false)
     abstract class NoteDatabase : RoomDatabase() {
 
         abstract fun noteDao(): NoteDao
@@ -38,4 +37,3 @@ abstract class NoteDatabase {
             }
         }
     }
-}
